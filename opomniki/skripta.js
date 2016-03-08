@@ -17,4 +17,12 @@ window.addEventListener('load', function() {
 	}
 	setInterval(posodobiOpomnike, 1000);
 	
+	var prijavniGumbClick = function() {
+		var text = document.getElementById("uporabnisko_ime").value;
+		document.getElementById("uporabnik").innerHTML = text;
+		document.querySelector(".pokrivalo").style.display = "none";
+	}
+	
+	var knof = document.querySelector("#prijavniGumb");
+	knof.addEventListener('click', prijavniGumbClick);
 });
